@@ -1,66 +1,34 @@
-## Foundry
+# Simple Storage
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Description
 
-Foundry consists of:
+Simple Storage is a basic Solidity smart contract that allows users to store and retrieve a favorite number. It also stores people's names and favorite numbers in an array and maps each person's name to their favorite number.
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
 
-## Documentation
+- Store and retrieve a favorite number.
+- Add people and their favorite numbers to an array.
+- Retrieve a person's favorite number using their name.
+- Run automated tests using Foundry.
 
-https://book.getfoundry.sh/
+## Requirements
 
-## Usage
+- [Foundry](https://getfoundry.sh/)
 
-### Build
+## Setup
 
-```shell
-$ forge build
+Clone the repository and navigate into the project directory:
+
+```javascript
+git clone https://github.com/ZalandZamar/simple-storage
+cd simple-storage
+forge build
 ```
 
-### Test
+## Run Tests
 
-```shell
-$ forge test
-```
+Run the test suite with:
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+```bash
+forge test
 ```
